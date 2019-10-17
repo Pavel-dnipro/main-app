@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "category": "typicode",
+      "description": "product description",
+      "price": 335
+
+    },
+    {
+      "id": 2,
+      "name": "json-server",
+      "category": "typicode",
+      "description": "product description",
+      "price": 25
+
+    },
+    {
+      "id": 3,
+      "name": "json-server",
+      "category": "typicode",
+      "description": "product description",
+      "price": 245
+
+    },
+    {
+      "id": 4,
+      "name": "json-server",
+      "category": "typicode",
+      "description": "product description",
+      "price": 885
+
+    }
+  ]
+}
