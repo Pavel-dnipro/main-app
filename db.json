@@ -2,34 +2,34 @@
   "products": [
     {
       "id": 1,
-      "name": "json-server",
-      "category": "typicode",
+      "name": "Boat",
+      "category": "Watersports",
       "description": "product description",
       "price": 335
 
     },
     {
       "id": 2,
-      "name": "json-server",
-      "category": "typicode",
+      "name": "Lifejacket",
+      "category": "Watersports",
       "description": "product description",
       "price": 25
 
     },
     {
       "id": 3,
-      "name": "json-server",
-      "category": "typicode",
+      "name": "Soccer ball",
+      "category": "Soccer",
       "description": "product description",
       "price": 245
 
     },
     {
       "id": 4,
-      "name": "json-server",
-      "category": "typicode",
+      "name": "Stadium",
+      "category": "Soccer",
       "description": "product description",
-      "price": 885
+      "price": 885000
 
     }
   ]

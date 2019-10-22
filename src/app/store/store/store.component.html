@@ -6,15 +6,31 @@
   </div>
   <div class="row">
     <div class="col-3 p-2">
-      <button class="btn btn-block btn-outline-primary">
+      <button class="btn btn-block btn-outline-primary" (click)="changeCategory(null)">
         Home
       </button>
-      <button routerlink="" class="btn btn-block btn-danger m-t-3">
+      <button class="btn btn-block btn-outline-primary"
+         *ngFor="let category of categories"
+         (click)="changeCategory(category)"
+         >{{category}}</button>
+      <button routerLink="/admin/products" class="btn btn-block btn-danger m-t-3">
           Admin
       </button>
     </div>
     <div class="col-9 p-2">
-        <div class="m-1 p-1 bg-light">
+
+        <div class="card m-1 p-1 bg-light" *ngFor="let product of products">
+          <h4>
+            {{product.name}}
+            <span class="badge badge-pill badge-primary float-right">
+                {{product.price | currency}}
+
+            </span>
+          </h4>
+          <div class="card-text bg-white p-1">
+            {{product.description}}
+            <button class="btn btn-success btn-sm float-right" (click)="addToCart(product)">Add to cart</button>
+          </div>
 
         </div>
 

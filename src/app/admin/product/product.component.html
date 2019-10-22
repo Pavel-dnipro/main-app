@@ -1,1 +1,45 @@
-<p>product works!</p>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col bg-dark text-white">
+        <a class="navbar-brand">Weed Store</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 p-2">
+        <button routerLink="/admin/products" class="btn btn-block btn-outline-primary">
+         Products
+        </button>
+        <button class="btn btn-block btn-outline-primary"
+           *ngFor="let category of categories"
+           (click)="changeCategory(category)"
+           >{{category}}</button>
+        <button routerlink="" class="btn btn-block btn-outline-primary">
+           Orders
+        </button>
+      </div>
+      <div class="col-9 p-2">
+      <table class="table table-sm table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i = index">
+              <td>{{i + 1}}</td>
+              <td>{{product.name}}</td>
+              <td>{{product.category}}</td>
+              <td>{{product.price}}</td>
+              <td><button class="btn btn-warning" (click)="">Edit</button>
+                <button class="btn btn-danger">Del</button> </td>
+          </tr>
+        </tbody>
+
+      </table>
+      <!-- <button class="btn btn-primary routerLink="/admin/main/products/create" tabindex="0">Create new product</button> -->
+    </div>
+  </div>
