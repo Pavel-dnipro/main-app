@@ -22,8 +22,7 @@ export class ProductFormComponent implements OnInit {
    private activatedRout: ActivatedRoute
    ) { }
 
-  ngOnInit() {
-  
+  ngOnInit() 
     const mode = this.activatedRout.snapshot.params['mode'];
     let product = new Product(name: '', category: '', this.description: '', price: 0);
 
