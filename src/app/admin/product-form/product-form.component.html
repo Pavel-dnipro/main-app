@@ -1,1 +1,23 @@
-<p>product-form works!</p>
+
+
+<form novalidate  [formGroup]="form" (ngSubmit)="save()">
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" formControlName="name"/>
+  </div>
+  <div class="form-group">
+    <label>Category</label>
+    <input class="form-control"  formControlName="category"/>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <textarea class="form-control" formControlName="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Price</label>
+    <input class="form-control" formControlName="price"/>
+
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="reset" class="btn btn-secondary" [routerLink]="['/admin/main/products']">Cancel</button>
+</form>

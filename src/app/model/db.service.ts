@@ -12,5 +12,8 @@ export class DbService {
     return this.http.get<Product[]>('http://localhost:3000/products');
   }
 
+  public addProduct(body: Product): Observable<object> {
+    return this.http.post<Product>('http://localhost:3000/products', body);
+  }
 
 }

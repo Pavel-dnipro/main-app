@@ -6,7 +6,6 @@
       "category": "Watersports",
       "description": "product description",
       "price": 335
-
     },
     {
       "id": 2,
@@ -14,7 +13,6 @@
       "category": "Watersports",
       "description": "product description",
       "price": 25
-
     },
     {
       "id": 3,
@@ -22,7 +20,6 @@
       "category": "Soccer",
       "description": "product description",
       "price": 245
-
     },
     {
       "id": 4,
@@ -30,7 +27,76 @@
       "category": "Soccer",
       "description": "product description",
       "price": 885000
-
+    },
+    {
+      "name": "3",
+      "category": "3",
+      "description": "3",
+      "price": "3",
+      "id": 5
+    },
+    {
+      "name": "3",
+      "category": "3",
+      "description": "3",
+      "price": "3",
+      "id": 6
+    },
+    {
+      "name": "5",
+      "category": "5",
+      "description": "5",
+      "price": "5",
+      "id": 7
+    },
+    {
+      "name": "58",
+      "category": "86",
+      "description": "876",
+      "price": "867",
+      "id": 8
+    },
+    {
+      "name": "58",
+      "category": "86",
+      "description": "876",
+      "price": "867",
+      "id": 9
+    },
+    {
+      "name": "58",
+      "category": "86",
+      "description": "876",
+      "price": "867",
+      "id": 10
+    },
+    {
+      "name": "58",
+      "category": "86",
+      "description": "876",
+      "price": "867",
+      "id": 11
+    },
+    {
+      "name": "58",
+      "category": "86",
+      "description": "876",
+      "price": "867",
+      "id": 12
+    },
+    {
+      "name": "58",
+      "category": "86",
+      "description": "876",
+      "price": "867",
+      "id": 13
+    },
+    {
+      "name": "Ronaldo",
+      "category": "Soccer",
+      "description": "player",
+      "price": "0",
+      "id": 14
     }
   ]
 }

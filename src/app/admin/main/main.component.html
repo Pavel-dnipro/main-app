@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col bg-dark text-white">
+      <a class="navbar-brand">Sport Store</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3 p-2">
+      <button routerLink="/admin/main/products" class="btn btn-block btn-outline-primary">
+         Products
+      </button>
+      <button routerLink="/admin/main/orders" class="btn btn-block btn-outline-primary">
+        Orders
+       </button>
+       <button routerLink="/store" class="btn btn-block btn-outline-primary">
+        Logout
+       </button>
+    </div>
+    <div class="col-9 p-2">
+     <router-outlet></router-outlet>
+    </div>
+
+</div>
