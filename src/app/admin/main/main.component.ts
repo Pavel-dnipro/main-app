@@ -1,6 +1,9 @@
 
+import { OrderLine } from 'src/app/model/order-line.model';
 
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/store/cart/cart.service';
+
 
 @Component({
   selector: 'app-main',
@@ -9,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MainComponent implements OnInit {
-  constructor() { }
+  constructor(public cartService: CartService) { }
 
   ngOnInit() { }
 }

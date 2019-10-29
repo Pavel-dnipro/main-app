@@ -18,6 +18,7 @@ export class ProductFormComponent implements OnInit {
   public description: FormControl;
   public price: FormControl;
   private id: number;
+  private mode: string;
 
   constructor(
    private repository: ProductRepository,
@@ -26,12 +27,12 @@ export class ProductFormComponent implements OnInit {
    ) { }
 
   ngOnInit() {
-    const mode = this.activatedRout.snapshot.params['mode'];
+    this.mode = this.activatedRout.snapshot.params['mode'];
     let product = new Product('', '', '', 0, '');
-   
 
-    if (mode === 'edit') {
-        
+
+    if (this.mode === 'edit') {
+
         const id = +this.activatedRout.snapshot.params['id'];
         product = this.repository.getProductById(id);
       }

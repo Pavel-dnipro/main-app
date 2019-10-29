@@ -6,10 +6,12 @@ import { ProductComponent } from './admin/product/product.component';
 import { MainComponent } from './admin/main/main.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { OrdersComponent } from './admin/orders/orders.component';
+import { CartComponent } from './store/cart/cart.component';
 
 
 const routes: Routes = [
   {path: 'store', component: StoreComponent},
+  {path: 'cart', component: CartComponent},
   {path: '', pathMatch: 'full', redirectTo: 'store'},
   {path: 'admin/main', component: MainComponent,
   children: [

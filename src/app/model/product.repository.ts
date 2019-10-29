@@ -1,7 +1,9 @@
- 
+
 import {Injectable} from '@angular/core';
 import { DbService } from './db.service';
 import { Product } from './product.module';
+import { OrderLine } from './order-line.model';
+import { Observable } from 'rxjs';
 
 
 
@@ -47,5 +49,14 @@ export class ProductRepository {
     this.dbService.editProduct(body, id).subscribe(() => {
       this.getList();
     });
+  }
+  public addOrder(order: OrderLine[]): any {
+    this.dbService.addOrder(order).subscribe(() => {
+
+    });
+  }
+
+  public getOrders(): Observable<Array<{id: number, list: OrderLine}>> {
+    return this.dbService.getOrders();
   }
 }
