@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { ProductRepository } from 'src/app/model/product.repository';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Product } from 'src/app/model/product.module';
+
 
 @Component({
   selector: 'app-product-form',
@@ -15,6 +17,7 @@ export class ProductFormComponent implements OnInit {
   public category: FormControl;
   public description: FormControl;
   public price: FormControl;
+  private id: number;
 
   constructor(
    private repository: ProductRepository,
@@ -22,20 +25,21 @@ export class ProductFormComponent implements OnInit {
    private activatedRout: ActivatedRoute
    ) { }
 
-  ngOnInit() 
+  ngOnInit() {
     const mode = this.activatedRout.snapshot.params['mode'];
-    let product = new Product(name: '', category: '', this.description: '', price: 0);
+    let product = new Product('', '', '', 0, '');
+   
 
     if (mode === 'edit') {
-        console.log(mode);
-        const id = +this.activatedRout.snapshot.params[ 'id' ];
+        
+        const id = +this.activatedRout.snapshot.params['id'];
         product = this.repository.getProductById(id);
       }
 
-    this.name = new FormControl('', Validators.required);
-    this.category = new FormControl('', Validators.required);
-    this.description = new FormControl('');
-    this.price = new FormControl('', Validators.required);
+    this.name = new FormControl(product.name, Validators.required);
+    this.category = new FormControl(product.category, Validators.required);
+    this.description = new FormControl(product.description);
+    this.price = new FormControl(product.price, Validators.required);
 
     this.form = new FormGroup( {
       name: this.name,
@@ -47,7 +51,11 @@ export class ProductFormComponent implements OnInit {
 
   public save(): void {
     if (this.form.valid) {
-      this.repository.createProduct(this.form.value);
+      if (this.mode === 'create') {
+        this.repository.createProduct(this.form.value);
+      } else {
+        this.repository.editProduct(this.form.value, this.id);
+      }
       this.router.navigate(['/admin/main/products']);
     }
 
