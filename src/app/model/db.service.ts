@@ -26,5 +26,5 @@ export class DbService {
     return this.http.post<any>('http://localhost:3000/orders', body);
   }
 
-  public getOrders()
+  // public getOrders()
 }
